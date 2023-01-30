@@ -1,0 +1,20 @@
+package com.example.demo.model;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name="EmpCountry")
+public class Employee {
+	
+	@Id
+	private int id;
+	
+	private String name;
+	private String email;
+	private String Country;
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", email=" + email + ", Country=" + Country + "]";
+	}
+	
+}

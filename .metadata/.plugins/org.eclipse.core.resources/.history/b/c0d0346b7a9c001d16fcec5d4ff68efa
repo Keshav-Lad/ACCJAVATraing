@@ -1,0 +1,15 @@
+package com.example.demo.repositery;
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.example.demo.model.*;
+
+public interface StudentRepositery extends JpaRepository<Student,Integer> {
+	
+	@Query(value="select s ,d from Student s left join Laptop d on s.laptop=d.laptop_id")
+	// select s from Student
+	public List<Student> LeftJoin();
+
+}

@@ -1,0 +1,12 @@
+package com.example.demo.repositery;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.example.demo.model.*;
+
+public interface StudentRepositery extends JpaRepository<Student,Integer> {
+	
+	@Query(value="select s from Student s where s.name=:city")
+	public Student getAll(String city);
+
+}

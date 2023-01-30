@@ -1,0 +1,11 @@
+package com.example.demo.model;
+
+public class Employee {
+	
+	@Id
+	@Column
+	private int id;
+	private String name;
+	private String dept;
+
+}

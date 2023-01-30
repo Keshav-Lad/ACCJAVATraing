@@ -1,0 +1,28 @@
+package com.example.demo.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.model.Student;
+import com.example.demo.services.StudentServiceImpl;
+
+@RestController
+public class StudentController {
+	
+	@Autowired
+	private StudentServiceImpl simpl;
+	
+	@GetMapping("/getleft")
+	public List<Student> getLeft() {
+		return simpl.leftJoin();
+		
+	}
+	@GetMapping("/getright")
+	public List<Student> getRight() {
+		return simpl.rightJoin();
+		
+	}
+}

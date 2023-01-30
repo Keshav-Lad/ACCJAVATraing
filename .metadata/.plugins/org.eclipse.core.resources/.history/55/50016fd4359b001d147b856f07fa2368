@@ -1,0 +1,33 @@
+package com.example.demo.Service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.example.demo.model.Employee;
+import com.example.demo.repositery.EmployeeRepositery;
+
+public class EmployeeServiceImpl implements EmployeeService {
+
+	EmployeeRepositery emprepo;
+	@Override
+	public Employee saveEmployee(Employee emp) {
+		
+		return emprepo.save(emp);
+	}
+
+	@Override
+	public List<Employee> getAllEmployee(Employee emp, int id) {
+		
+		return (List<Employee>)emprepo.findAll();
+	}
+
+	@Override
+	public void deleteById(int id) {
+		
+		
+	}
+	
+	
+	
+
+}

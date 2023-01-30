@@ -1,0 +1,12 @@
+package com.example.demo.model;
+import jakarta.persistence.*;
+
+@Entity
+@Table(name="Laptop_data")
+public class Laptop {
+	
+	@Id
+	private int laptop_id;
+	private String brand;
+	private String model;
+}

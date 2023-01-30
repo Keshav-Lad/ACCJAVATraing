@@ -1,0 +1,13 @@
+package com.example.demo.entity;
+
+public class Student {
+	
+	@Id
+	private int student_id;
+	private String name;
+	private String city;
+	
+	
+	
+
+}

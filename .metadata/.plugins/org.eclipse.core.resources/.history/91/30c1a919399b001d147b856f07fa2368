@@ -1,0 +1,40 @@
+package com.example.demo.Service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.model.Employee;
+import com.example.demo.repositery.EmployeeRepositery;
+
+@Service
+public class EmployeeServiceImpl implements EmployeeService {
+
+	
+	@Autowired
+	private EmployeeRepositery emprepo;
+	@Override
+	public Employee saveEmployee(Employee emp) {
+		
+		return emprepo.save(emp);
+	}
+
+	@Override
+	public List<Employee> getAllEmployee() {
+		
+		return (List<Employee>)emprepo.findAll();
+	}
+
+	@Override
+	public void deleteById(int id) {
+		
+		emprepo.deleteById(id);
+		
+	}
+	
+	
+	
+
+}

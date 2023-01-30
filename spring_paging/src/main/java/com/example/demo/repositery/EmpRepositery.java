@@ -1,0 +1,18 @@
+package com.example.demo.repositery;
+
+import java.util.List;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.PagingAndSortingRepository;
+
+import com.example.demo.model.Employee;
+
+public interface EmpRepositery extends PagingAndSortingRepository<Employee,Integer> {
+	
+	@Query("select e from Employee e where e.Country=:countryname")
+	public Page<Employee>findByCountry(String countryname,Pageable p);
+
+}

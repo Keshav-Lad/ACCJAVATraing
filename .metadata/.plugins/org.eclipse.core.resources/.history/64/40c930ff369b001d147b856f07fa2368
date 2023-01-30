@@ -1,0 +1,25 @@
+package com.example.demo.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.Service.EmployeeService;
+import com.example.demo.Service.EmployeeServiceImpl;
+import com.example.demo.model.Employee;
+
+@RestController
+public class EmployeeController {
+	
+	
+	@Autowired
+	EmployeeService emp;
+	
+	@PostMapping("/addemp")
+	public Employee savaEmployee(@RequestBody Employee emp) {
+		return emp.
+	}
+	
+
+}

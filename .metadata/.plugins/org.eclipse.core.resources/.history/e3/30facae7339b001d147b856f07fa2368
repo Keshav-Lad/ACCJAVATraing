@@ -1,0 +1,19 @@
+package com.example.demo.model;
+
+import org.springframework.data.annotation.Id;
+
+import jakarta.persistence.Column;
+
+
+
+@Entity
+@Table
+public class Employee {
+	
+	@Id
+	@Column
+	private int id;
+	private String name;
+	private String dept;
+
+}

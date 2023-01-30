@@ -1,0 +1,13 @@
+package com.example.demo.repositery;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.example.demo.model.*;
+
+public interface StudentRepositery extends JpaRepository<Student,Integer> {
+	
+	@Query(value="select s from Student s JOIN  s.laptop l where s.laptop LIKE '%l.laptop_id%'")
+	SELECT u FROM User u JOIN u.roles r WHERE r.name
+	public Student getAll(String city);
+
+}
